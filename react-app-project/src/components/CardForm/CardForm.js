@@ -13,7 +13,7 @@ const CardForm = props => {
 
     return (
         <form className={styles.cardForm} onSubmit={handleSubmit}>
-            <TextInput value={title} onChange={e => setTitle(e.target.value)} />
+            <TextInput value={title} onChange={e => setTitle(e.target.value)} action={props.addCard}  />
             <Button>Add card</Button>
         </form>
     );
