@@ -17,7 +17,7 @@ const columns = useSelector(state => state.columns)
         <p className={styles.description}>Interesting things I want to check out</p>
 
       <section className={styles.columns}>
-        {columns.map(column => <Column key={column.id} id={column.id} title={column.title} icon={column.icon} cards={column.cards} />)}
+        {columns.map(column => <Column key={column.id} {...column}  />)}
       </section>
 
       <ColumnForm  />
