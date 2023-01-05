@@ -7,6 +7,7 @@ import strContains from '../utils/strContains';
 export const getFilteredCards = ({ cards, searchString }, columnId) => cards
   .filter(card => card.columnId === columnId && strContains(card.title, searchString));
 
+  export const getAllColumns = ({ columns }) => columns;
 
   const reducer = (state, action) => {
   switch(action.type) {
