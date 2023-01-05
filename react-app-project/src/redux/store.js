@@ -11,7 +11,8 @@ export const getFilteredCards = ({ cards, searchString }, columnId) => cards
 
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
-export const addCard = payload => ({ type: 'ADD_CARD', payload })
+export const addCard = payload => ({ type: 'ADD_CARD', payload });
+export const updateSearch = payload => ({ type: 'UPDATE_SEARCHSTRING', payload });
 
   const reducer = (state, action) => {
   switch(action.type) {
