@@ -1,0 +1,25 @@
+@import '../../styles/settings.scss';
+
+.about {
+  padding: $base-size;
+}
+
+.about_title {
+  padding: ($base-size * 3) 0;
+  text-align: center;
+  font-size: ($base-size * 3);
+  text-transform: uppercase;
+}
+
+
+.about_subtitle {
+  padding: ($base-size * 2) 0;
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.about_title + .about_subtitle {
+  margin-top: (- $base-size * 3);
+}

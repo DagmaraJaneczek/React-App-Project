@@ -1,0 +1,25 @@
+@import '../../styles/settings.scss';
+
+.favorite {
+  padding: $base-size;
+}
+
+.favorite_title {
+  padding: ($base-size * 3) 0;
+  text-align: center;
+  font-size: ($base-size * 3);
+  text-transform: uppercase;
+}
+
+
+.favorite_subtitle {
+  padding: ($base-size * 2) 0;
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.favorite_title + .favorite_subtitle {
+  margin-top: (- $base-size * 3);
+}
