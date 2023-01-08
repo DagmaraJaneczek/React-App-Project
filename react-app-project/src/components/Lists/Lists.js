@@ -3,6 +3,7 @@ import { getAllLists } from "../../redux/store"
 import styles from './Lists.module.scss'
 import { Link } from "react-router-dom"
 
+
 const Lists = () => {
 
     const lists = useSelector((state) => getAllLists(state));
