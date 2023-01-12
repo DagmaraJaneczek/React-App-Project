@@ -7,7 +7,7 @@ const Card = ({ id, title, isFavorite }) => {
     const dispatch = useDispatch();
 
     const toggleFavorite = () => {
-        dispatch(toggleCard(id, isFavorite))
+        dispatch(toggleCard(id))
     };
 
     const remove = () => {

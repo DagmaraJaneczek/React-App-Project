@@ -2,10 +2,10 @@ import shortid from "shortid";
 
 //selectors
 export const getFilteredCards = ({ cards, searchString }, columnId) => cards
-  .filter(card => card.columnId  && card.title.toLowerCase().includes(searchString.toLowerCase()));
+  .filter(card => card.columnId === columnId && card.title.toLowerCase().includes(searchString.toLowerCase()));
 
 export const getFliteredFavoriteCards = (state) => {
-  return(state.cards.fliter((card => card.isFavorite === true)));
+  return(state.cards.filter((card => card.isFavorite === true)));
 };
 
 const createActionName = actionName => `app/cards/${actionName}`;
@@ -21,11 +21,11 @@ export const toggleCard = payload => ({ type: TOGGLE_CARD_FAVORITE, payload });
 
 const cardsReducer = (statePart = [], action) => {
     switch(action.type) {
-      case 'ADD_CARD':
+      case ADD_CARD:
         return [...statePart, { ...action.payload, id: shortid() }];
-      case 'REMOVE_CARD':
+      case REMOVE_CARD:
         return statePart.filter((card) => card.id !== action.payload);
-      case 'TOGGLE_CARD_FAVORITE':
+      case TOGGLE_CARD_FAVORITE:
         return statePart.map(card => (card.id === action.payload) ? { ...card, isFavorite: !card.isFavorite } : card);
       default:
         return statePart;
