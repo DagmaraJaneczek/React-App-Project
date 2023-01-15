@@ -20,6 +20,10 @@
   font-size: 20px;
 }
 
+.activestar {
+  color: #f1c40f;
+}
+
 .remove_btn {
     color: $color-dark;
     cursor: pointer;
@@ -28,6 +32,9 @@
     font-size: 20px;
 }
 
-.active {
-  color: $color-warning;
+.remove_btn:hover {
+  color:red;
 }
+
+
+

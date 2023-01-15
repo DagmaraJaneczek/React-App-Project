@@ -17,10 +17,10 @@ const Card = ({ id, title, isFavorite }) => {
     return (
       <li className={styles.card}>{title}
         <div>
-          <button onClick={toggleFavorite} className={clsx(styles.star_btn, isFavorite && styles.active)}>
+          <button onClick={toggleFavorite} className={clsx(styles.star_btn, isFavorite && styles.activestar)}>
             <span className='fa fa-star-o'></span>
           </button>
-          <button onClick={remove} className={clsx(styles.remove_btn, isFavorite && styles.active)}>
+          <button onClick={remove} className={styles.remove_btn}>
             <span className='fa fa-trash'></span>
           </button>
         </div>
